@@ -8,5 +8,9 @@ env:
   commonjs: true
   mocha: true
 
-extends: 'htmlacademy/es6'
-    
+extends: 'airbnb'
+parser: 'babel-eslint'
+
+rules: {
+  "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+}
