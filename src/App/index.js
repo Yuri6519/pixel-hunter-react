@@ -6,7 +6,7 @@ export default class App extends PureComponent {
   render() {
     return (
       <div>
-        A pixel hunter application will be deployed here:
+        A pixel hunter-application will be deployed here:
         <Timer />
       </div>
     );
