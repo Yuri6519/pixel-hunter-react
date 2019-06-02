@@ -1,0 +1,20 @@
+parserOptions:
+  ecmaVersion: 2018
+  sourceType: 'module'
+
+env:
+  es6: true
+  browser: true
+  commonjs: true
+  mocha: true
+
+extends: 'airbnb'
+parser: 'babel-eslint'
+
+rules: {
+  "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+  "import/prefer-default-export": off,
+  "react/forbid-prop-types": off,
+  "react/prefer-stateless-function": off,
+
+}
