@@ -1,4 +1,4 @@
-import React, { PureComponent, Fragment } from 'react';
+import React, { PureComponent } from 'react';
 import { number } from 'prop-types';
 import { connect } from 'react-redux';
 import { dispatch, select } from '../../../core';
@@ -6,12 +6,10 @@ import { dispatch, select } from '../../../core';
 class Timer extends PureComponent {
   static defaultProps ={
     value: 0,
-    valueMulty: 0,
   }
 
   static propTypes ={
     value: number,
-    valueMulty: number,
   }
 
   componentDidMount() {
@@ -29,13 +27,10 @@ class Timer extends PureComponent {
   }
 
   render() {
-    const { value, valueMulty } = this.props;
+    const { value } = this.props;
 
     return (
-      <Fragment>
-        <div>{value}</div>
-        <div>{valueMulty}</div>
-      </Fragment>
+      <div className="game__timer">{value}</div>
     );
   }
 }
