@@ -1,3 +1,6 @@
+
+import produce from 'immer';
+
 const delay = time => new Promise(resolve => setTimeout(() => resolve(), time));
 
 const initialState = { value: 0 };
@@ -6,13 +9,13 @@ const timer = {
   state: initialState,
 
   reducers: {
-    tick({ value }, payload) {
-      const newVal = value + payload;
-      return { value: newVal };
-    },
-    reset() {
-      return { value: 0 };
-    },
+    tick: (state, payload) => produce(state, draft => {
+      draft.value += payload;
+    }),
+
+    reset: (state) => produce(state, draft => {
+      draft.value = 0;
+    }),
   },
 
   effects: () => ({

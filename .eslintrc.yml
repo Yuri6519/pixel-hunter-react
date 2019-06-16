@@ -16,5 +16,10 @@ rules: {
   "import/prefer-default-export": off,
   "react/forbid-prop-types": off,
   "react/prefer-stateless-function": off,
+  "no-plusplus": off,
+  "no-param-reassign": off,
+  "arrow-parens": off,
+  "react/jsx-one-expression-per-line": off,
+  "react/button-has-type": off,
 
 }

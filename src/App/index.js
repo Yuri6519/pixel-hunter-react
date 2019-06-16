@@ -1,14 +1,31 @@
 import React, { PureComponent } from 'react';
-import Timer from '../components/atoms/timer';
+import { connect } from 'react-redux';
+import { string } from 'prop-types';
+import Component from './utils';
 
+class App extends PureComponent {
+  static propTypes = {
+    currentLevel: string,
+  }
 
-export default class App extends PureComponent {
+  static defaultProps = {
+    currentLevel: '',
+  }
+
+  componentDidMount() {
+    console.log('App::componentDidMount');
+  }
+
   render() {
+    const { currentLevel } = this.props;
     return (
-      <div>
-        A pixel hunter-application will be deployed here:
-        <Timer />
-      </div>
+      <Component level={currentLevel} />
     );
   }
 }
+
+const mapStateToProps = (state) => ({
+  currentLevel: state.router.current.value,
+});
+
+export default connect(mapStateToProps)(App);
