@@ -13,7 +13,7 @@ class App extends PureComponent {
   }
 
   componentDidMount() {
-    console.log('App::componentDidMount');
+    // console.log('App::componentDidMount');
   }
 
   render() {
