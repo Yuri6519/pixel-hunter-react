@@ -1,5 +1,5 @@
 import React, { PureComponent, Fragment } from 'react';
-import Header from '../../molecules/header';
+import Header from '../../organisms/header';
 import Button from '../../atoms/button-rules';
 import { dispatch } from '../../../core';
 

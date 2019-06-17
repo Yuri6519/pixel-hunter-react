@@ -16,19 +16,26 @@ export const LEVELS = [GREETING, RULES, GAME];
 // export const NEXT_LEVEL_SCREEN = 'next_level_screen';
 
 // // score
-// export const TIME_FAST = 10;
-// export const TIME_SLOW = 20;
-// export const MAX_LIFES_COUNT = 3;
-// export const MAX_LEVELS = 10;
+export const TIME_FAST = 10;
+export const TIME_SLOW = 20;
+export const MAX_LIFES_COUNT = 3;
+export const MAX_LEVELS = 10;
 // export const LIFE_SCORE = 50;
 // export const CORRECT_ANSWER = 1;
 // export const CORRECT_ANSWER_POINTS = 100;
 // export const ERROR_LIFES_OVER = -999;
 
 // // responses
-// export const RESP_OK = 1;
-// export const RESP_FAIL = 0;
-// export const RESP_UNKNOWN = -1;
+export const RESP_OK = 1;
+export const RESP_FAIL = 0;
+export const RESP_UNKNOWN = -1;
+
+// // stat class suffix
+export const STAT_UNKNOWN = 'unknown';
+export const STAT_WRONG = 'wrong';
+export const STAT_SLOW = 'slow';
+export const STAT_FAST = 'fast';
+export const STAT_CORRECT = 'correct';
 
 // // answer selectors
 // export const RES_STATUS = 'RES_STATUS';

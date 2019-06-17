@@ -1,4 +1,3 @@
-import produce from 'immer';
 import { INTRO } from '../../../common/constants';
 import { init, next, last } from './utils';
 
@@ -13,26 +12,26 @@ export default {
   state: initialState,
 
   reducers: {
-    next: (state) => produce(state, draft => {
-      const { done } = state;
+    next: (draft) => {
+      const { done } = draft;
 
       if (!done) {
         draft.current = next();
       }
-    }),
+    },
 
-    back: (state) => produce(state, draft => {
+    back: (draft) => {
       init();
-      const { done } = state;
+      const { done } = draft;
 
       if (!done) {
         draft.current = next();
       }
-    }),
+    },
 
-    last: (state) => produce(state, draft => {
+    last: (draft) => {
       draft.current = last();
-    }),
+    },
 
   },
 

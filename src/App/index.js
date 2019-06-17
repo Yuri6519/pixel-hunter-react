@@ -12,10 +12,6 @@ class App extends PureComponent {
     currentLevel: '',
   }
 
-  componentDidMount() {
-    // console.log('App::componentDidMount');
-  }
-
   render() {
     const { currentLevel } = this.props;
     return (

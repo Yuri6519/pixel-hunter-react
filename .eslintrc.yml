@@ -21,5 +21,7 @@ rules: {
   "arrow-parens": off,
   "react/jsx-one-expression-per-line": off,
   "react/button-has-type": off,
+  "class-methods-use-this": off,
+  "no-restricted-syntax": off,
 
 }

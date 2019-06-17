@@ -1,8 +1,10 @@
 import { LEVELS, STAT } from '../../../common/constants';
 
+const levels = LEVELS;
+
 function* gen() {
-  for (let i = 0; i < LEVELS.length; i++) {
-    yield LEVELS[i];
+  for (let i = 0; i < levels.length; i++) {
+    yield levels[i];
   }
   return STAT;
 }
@@ -13,9 +15,9 @@ export const init = () => {
   generator = gen();
 };
 
-init();
-
 export const next = () => generator.next();
 
-
 export const last = () => generator.return(STAT);
+
+// инициализируем
+init();

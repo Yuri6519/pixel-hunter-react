@@ -13,6 +13,7 @@ class Timer extends PureComponent {
   }
 
   componentDidMount() {
+    dispatch.timer.reset();
     this.timer = setInterval(() => { this.tick(); }, 1000);
   }
 
