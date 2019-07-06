@@ -11,6 +11,12 @@ import {
   RESP_FAIL,
 } from '../../../common/constants';
 
+import { init as genInit, next as genNext, last as genLast } from './generator';
+
+export const initialLevel = {
+  value: {},
+  done: false,
+};
 
 export const getRespForStat = (resp = []) => resp.map(itr => {
   let result = STAT_UNKNOWN;
@@ -40,3 +46,9 @@ export const getRespForStat = (resp = []) => resp.map(itr => {
   }
   return result;
 });
+
+export const init = levels => genInit(levels);
+
+export const next = () => genNext();
+
+export const last = () => genLast();

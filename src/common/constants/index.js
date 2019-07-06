@@ -7,9 +7,18 @@ export const STAT = 'stats';
 
 export const LEVELS = [GREETING, RULES, GAME];
 
-// export const FIRST_GAME = 'game-1';
-// export const SECOND_GAME = 'game-2';
-// export const THIRD_GAME = 'game-3';
+export const NO_GAME = 'none';
+export const FIRST_GAME = 'game-1';
+export const SECOND_GAME = 'game-2';
+export const THIRD_GAME = 'game-3';
+
+export const PAINT = 'paint';
+export const PHOTO = 'photo';
+
+export const GAME_CHANGE_NONE = 'none';
+export const GAME_CHANGE_LEVEL = 'level';
+export const GAME_CHANGE_RESP = 'resp';
+export const GAME_CHANGE_LAST = 'last';
 
 
 // export const NO_LEVEL_SCREEN = 'no_level_screen';

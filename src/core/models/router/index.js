@@ -12,7 +12,7 @@ export default {
   state: initialState,
 
   reducers: {
-    next: (draft) => {
+    next: draft => {
       const { done } = draft;
 
       if (!done) {
@@ -20,7 +20,9 @@ export default {
       }
     },
 
-    back: (draft) => {
+    back: draft => {
+      console.log('STORE::router::reducers::back::');
+
       init();
       const { done } = draft;
 
@@ -29,10 +31,20 @@ export default {
       }
     },
 
-    last: (draft) => {
+    last: draft => {
       draft.current = last();
     },
 
   },
+
+  effects: dispatch => ({
+    async return() {
+      console.log('STORE::router::effects::back::');
+
+      await dispatch.game.reset();
+      await this.back();
+    },
+  }),
+
 
 };

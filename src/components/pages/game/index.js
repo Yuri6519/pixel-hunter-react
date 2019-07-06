@@ -3,7 +3,7 @@ import Header from '../../organisms/header';
 import Timer from '../../atoms/timer';
 import Lives from '../../molecules/lives';
 import StatList from '../../molecules/stat-list';
-// import { dispatch, select } from '../../../core';
+import Processor from '../../organisms/page-processor';
 
 class Game extends PureComponent {
   get timer() {
@@ -15,26 +15,11 @@ class Game extends PureComponent {
   }
 
   get level() {
-    return <div>LEVEL:::</div>;
+    return <Processor />;
   }
 
   get footer() {
     return <StatList />;
-
-    // return (
-    //   <ul className="stats">
-    //     <li className="stats__result stats__result--wrong" />
-    //     <li className="stats__result stats__result--slow" />
-    //     <li className="stats__result stats__result--fast" />
-    //     <li className="stats__result stats__result--correct" />
-    //     <li className="stats__result stats__result--unknown" />
-    //     <li className="stats__result stats__result--unknown" />
-    //     <li className="stats__result stats__result--unknown" />
-    //     <li className="stats__result stats__result--unknown" />
-    //     <li className="stats__result stats__result--unknown" />
-    //     <li className="stats__result stats__result--unknown" />
-    //   </ul>
-    // );
   }
 
   render() {

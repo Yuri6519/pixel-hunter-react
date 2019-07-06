@@ -3,7 +3,7 @@ import { dispatch } from '../../../core';
 
 class ButtonBack extends PureComponent {
   onClick = () => {
-    dispatch.router.back();
+    dispatch.router.return();
   };
 
   render() {
